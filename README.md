@@ -1,5 +1,13 @@
 # Tester(ka)
-
+## Stručné scénáře, co by šlo dále otestovat
+  1. Kontrola stavu faktury v přehledu transakcí:
+  2. Kontrola přidání položek na fakturu
+  3. Kontrola odebrání položek z faktury
+  4. Kontrola validace faktury při vytváření nebo editaci
+  5. Kontrola správnosti údajů na faktuře
+  6. Ověření funkčnosti filtrování faktur
+  7. Kontrola odeslání faktury e-mailem
+  8. Ověření správnosti výpočtu daně 
 ## Intro
 Tvým úkolem je připravit E2E testy pro sekci kontakty na těchto doménách:
 

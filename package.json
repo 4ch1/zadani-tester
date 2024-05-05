@@ -1,5 +1,12 @@
 {
+  "scripts": {
+    "cypress-open": "cypress open",
+    "cypres-open:com": "npx cypress open --env environmentName=com",
+    "cypres-open:cz": "npx cypress open --env environmentName=cz",
+    "cypres-open:sk": "npx cypress open --env environmentName=sk"
+  },
   "devDependencies": {
-    "cypress": "^12.8.1"
+    "cypress": "^12.8.1",
+    "faker": "^6.6.6"
   }
 }
