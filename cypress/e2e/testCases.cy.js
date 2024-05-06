@@ -66,7 +66,7 @@ describe('Contact page', () => {
         cy.assertValues(selectors.FIRST_ROW_SECOND_COLUMN, secondId);
     });
 
-    it.only('Create invoice via contact details, check invoice count and price', () => {
+    it('Create invoice via contact details, check invoice count and price', () => {
 
         const randomName = Math.random().toString(36).substring(3)
         const randomID = Math.floor(Math.random() * 90000000) + 10000000;
