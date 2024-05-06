@@ -76,7 +76,7 @@ describe('Contact page', () => {
         cy.goToContactsviaHeader()
         cy.createContact(randomName, randomID)
         // 0 invoices
-        cy.assertValues(FIRST_ROW_FIFTH_COLUMN, '0');
+        cy.assertValues(selectors.FIRST_ROW_FIFTH_COLUMN, '0');
         cy.get(selectors.FIRST_ROW_FIRST_COLUMN).find('a').click()
         cy.get(selectors.CREATE_INVOICE_BUTTON).eq(1).click()
         cy.generateRandomRegistrationNumber().then(randomRegistrationNumber => {
@@ -98,10 +98,10 @@ describe('Contact page', () => {
         cy.checkAlertTitleExists();
         cy.clickContactsBreadcrumbs();
         //it shows 1 invoice in contacts page
-        cy.assertValues(FIRST_ROW_FIFTH_COLUMN, '1');
+        cy.assertValues(selectors.FIRST_ROW_FIFTH_COLUMN, '1');
         cy.goToInvoicesviaHeader()
         const environment = Cypress.env('environmentName');
-        if (environment === 'com') cy.assertValues(FIRST_ROW_SIXTH_COLUMN, unitPrice.toLocaleString())
-        else cy.assertValues(FIRST_ROW_SIXTH_COLUMN, unitPrice.toLocaleString('sk-SK'))
+        if (environment === 'com') cy.assertValues(selectors.FIRST_ROW_SIXTH_COLUMN, unitPrice.toLocaleString())
+        else cy.assertValues(selectors.FIRST_ROW_SIXTH_COLUMN, unitPrice.toLocaleString('sk-SK'))
     });
 });
